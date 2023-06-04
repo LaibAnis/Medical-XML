@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- Declaration globale-->
+<xsd:element name="nom" type="xsd:string"/>
+<xsd:element name="prenom" type="xsd:string"/>
+<xsd:simpleType name="specenum">
+    <xsd:restriction base="xsd:string">
+        <xsd:pattern value="(Anatomo-cyto-pathologie|Anesthésie_Réanimation|Cardiologie|Chirurgie_Dentaire spécialité_O.D.F|Chirurgie Générale|Chirurgie Infantile|Chirurgie|Maxillo_faciale|Chirurgie|Maxillo_faciale_et_Stomatologie|chirurgie_Orthopédique_et_Traumatologique|Chirurgie_Plastique_et_Esthétique|Chirurgie_Thoracique_et_Cardiologie|Chirurgie_Urologique|Chirurgie_Vasculaire|Chirurgie_Viscérale_et_Digestive|Chirurgie_Dentaire|Dermato_Vénérologie|Directeur_de_Laboratoire_Médecin|Endocrinologie_Métabolique|Gastro_Entéro_Hépatologie|Génétique_Médicale|Gériatrie|Gynécologie_Médicale|Gynécologie_Obstétrique_et_Gynécologie_Médicale|Gynécologie_Obstétrique|Hématologie|Médecine_Générale|Médecine_Interne|Médecine_Nucléaire|Néphrologie|Neuro_chirurgie|Neurologie|Neuro_psychiatrie|Obstétrique|Oncologie_Médicale|Oncologie|Radiothérapique|Ophtalmologie|Oto_Rhino_Laryngologie|Pédiatrie|Pneumologie|Psychiatrie|Psychiatrie_Infantile|Radiologie|Radiothérapie|Réanimation Médicale|Rééducation_Réadaptation_Fonctionnelle|Rhumatologie|Sage-femme|Santé_publique_et_médecine_sociale|Spécialiste_en_médecine_générale_avec_diplôme|Spécialiste_en_médecine_générale_reconnu_par_l_ordre|Stomatologie)"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="date">
+    <xsd:sequence>
+        <xsd:element name="jour" type="xsd:positiveInteger"/>
+        <xsd:element name="mois" type="xsd:positiveInteger"/>
+        <xsd:element name="annee" type="xsd:positiveInteger"/>
+    </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="liantcd">
+    <xsd:sequence>
+        <xsd:choice>
+            <xsd:element name="antecedant" type="antcdentallergie" minOccurs="1" maxOccurs="unbounded"/>
+            <xsd:element name="pasdantecedant" fixed="" minOccurs="1" maxOccurs="1"/>
+        </xsd:choice>
+    </xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="img">
+    <xsd:complexType>
+        <xsd:attribute name="src" type="xsd:string" use="required" />
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:complexType name="listallrgie">
+    <xsd:sequence>
+        <xsd:choice>
+            <xsd:element name="allergie" type="antcdentallergie" minOccurs="1" maxOccurs="unbounded"/>
+            <xsd:element name="pasdallergie" fixed="" minOccurs="1" maxOccurs="1"/>
+        </xsd:choice>
+    </xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:complexType name="antcdentallergie">
+        <xsd:sequence>
+            <xsd:element ref="nom"/>
+            <xsd:element name="parent" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="commentaire" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="annee" type="xsd:positiveInteger"/>
+        </xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="listediplomme">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="diplomme" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="listeexperience">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="experience" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="email">
+     <xsd:complexType>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="type">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="personel"/>
+                            <xsd:enumeration value="profesionnel"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:simpleType name="num">
+    <xsd:restriction base="xsd:string">
+        <xsd:pattern value="0[567][0-9]{8}"></xsd:pattern>
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:element name="numero">
+     <xsd:complexType>
+        <xsd:simpleContent>
+            <xsd:extension base="num">
+                <xsd:attribute name="categorie" >
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="mobile"/>
+                            <xsd:enumeration value="fix"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+</xsd:element>
+
+ <xsd:element name="adresse">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="pays" type="xsd:string"/>
+            <xsd:element name="wilaya" type="xsd:string"/>
+            <xsd:element name="localitee" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="type"  use="required">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="privee"/>
+                    <xsd:enumeration value="travaille"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="lieux">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="nom"/>
+            <xsd:element ref="adresse"/>
+        </xsd:sequence>
+        <xsd:attribute name="type"  use="required">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="cabinet"/>
+                    <xsd:enumeration value="etablissementdesante"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="lieuxdetravaille">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="lieux" maxOccurs="7"/>
+        </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+
+<xsd:element name="informationpersonnel">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="nom"/>
+            <xsd:element ref="prenom"/>
+            <xsd:element ref="img"/>
+            <xsd:element name="datedenaissance" type="date"/>
+            <xsd:element ref="numero" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="email"/> 
+            <xsd:element ref="adresse"/>                
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="informationprofesionnel">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="specialite" type="specenum"/>
+            <xsd:element ref="numero"/>
+            <xsd:element ref="lieuxdetravaille"/>
+            <xsd:element ref="listediplomme" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="listeexperience" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="medecintraitant">
+    <xsd:complexType>
+        <xsd:attribute name="ref" type="xsd:IDREFS" use="required"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="patientconcernee">
+    <xsd:complexType>
+        <xsd:attribute name="ref" type="xsd:IDREFS" use="required"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="informationadministrative">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="patientconcernee"/>
+            <xsd:element name="datedecreation" type="date"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="consultation">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="mantant" type="xsd:positiveInteger"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:ID"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="listeconsultation">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="consultation" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="listantecedant">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="antecedantmedicaux" type="liantcd"/>
+            <xsd:element name="antecedantchurigicaux" type="liantcd"/>
+            <xsd:element name="antecedantfamiliaux" type="liantcd"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="listeallergie" type="listallrgie"/>
+
+<xsd:complexType name="consom">
+    <xsd:attribute name="consomation" use="required">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="non"/>
+                <xsd:enumeration value="oui"/>
+                <xsd:enumeration value="sevree"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+</xsd:complexType>
+
+<xsd:element name="modedevie">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="tabac" type="consom"/>
+            <xsd:element name="alcool" type="consom"/>
+            <xsd:element name="profession" type="xsd:string"/>
+            <xsd:element name="autreinformation" type="xsd:string" minOccurs="0" maxOccurs="1"  />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="donneedesuivie">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="taille" type="xsd:string"/>
+            <xsd:element name="poids" type="xsd:string"/>
+            <xsd:element name="imc" type="xsd:string"/>
+            <xsd:element name="pressionAS" type="xsd:string"/>
+            <xsd:element name="pressionAD" type="xsd:string"/>
+            <xsd:element name="frequencecardiaque" type="xsd:string"/>
+            <xsd:element name="autredonnee" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:any/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="vaccin">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="nom"/>
+            <xsd:element name="annee" type="xsd:positiveInteger"/>
+            <xsd:element name="age" type="xsd:positiveInteger"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="carnetvaccination">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="vaccin" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="traitement">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="nom"/>
+            <xsd:element name="commentaire" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="idconsultation" type="xsd:IDREF" use="optional"/>
+        <xsd:attribute name="refordonnance" type="xsd:IDREF" use="optional"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="listetraitementdefond">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="traitement" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="listetraitementponctuel">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="traitement" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="emeteur">
+    <xsd:complexType>
+        <xsd:attribute name="ref" type="xsd:IDREF" use="required"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="document">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="nom"/>
+            <xsd:element ref="emeteur"/>
+        </xsd:sequence>
+        <xsd:attribute name="ide" type="xsd:ID" use="required"/>
+        <xsd:attribute name="src" type="xsd:anyURI" use="required"/>
+        <xsd:attribute name="type" use="required">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="imagerie_médicale"/>
+                    <xsd:enumeration value="résultats_d_analyses"/>
+                    <xsd:enumeration value="ordonnance_de_pharmacie"/>
+                    <xsd:enumeration value="certificat"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="idconsultation" type="xsd:IDREF" use="optional"/>
+    </xsd:complexType>
+</xsd:element>
+
+
+<xsd:element name="listedocument">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="document" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="observationmedical">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="motif" type="xsd:string"/>
+            <xsd:element name="interogatoire" type="xsd:string"/>
+            <xsd:element name="examen" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="ido" type="xsd:ID" use="required"/>
+        <xsd:attribute name="idconsultation" type="xsd:IDREF" use="required"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="listobservationmedicale">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="observationmedical" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+
+
+
+
+
+    <xsd:element name="dossiermidecaux">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="listemedecin">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="medecin" minOccurs="1" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element ref="informationpersonnel"/>
+                                        <xsd:element ref="informationprofesionnel"/>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="idm" type="xsd:ID" use="required"/>
+                                    <xsd:attribute name="sexe" use="required">
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:enumeration value="homme"/>
+                                                <xsd:enumeration value="femme"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:attribute>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="listepatient">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="patient" minOccurs="1" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element ref="nom"/>
+                                        <xsd:element ref="prenom"/>
+                                        <xsd:element ref="img"/>
+                                        <xsd:element name="datedenaissance" type="date"/>
+                                        <xsd:element name="age" type="xsd:positiveInteger"/>
+                                        <xsd:element ref="email" minOccurs="0" maxOccurs="1"/>
+                                        <xsd:element ref="numero" minOccurs="0" maxOccurs="1"/>
+                                        <xsd:element ref="adresse"/>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="idp" type="xsd:ID" use="required"/>
+                                    <xsd:attribute name="sexe" use="required">
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:enumeration value="homme"/>
+                                                <xsd:enumeration value="femme"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:attribute>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="listdossier">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="dossier" minOccurs="1" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element ref="medecintraitant"/>
+                                        <xsd:element ref="informationadministrative"/>
+                                        <xsd:element ref="listeconsultation"/>
+                                        <xsd:element ref="listantecedant"/>
+                                        <xsd:element ref="listeallergie"/>
+                                        <xsd:element ref="modedevie"/>
+                                        <xsd:element ref="donneedesuivie"/>
+                                        <xsd:element ref="carnetvaccination"/>
+                                        <xsd:element ref="listetraitementdefond"/>
+                                        <xsd:element ref="listetraitementponctuel"/>
+                                        <xsd:element ref="listedocument"/>
+                                        <xsd:element ref="listobservationmedicale"/>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="idd" type="xsd:ID" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                    
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+        
+    </xsd:element>
+</xsd:schema>

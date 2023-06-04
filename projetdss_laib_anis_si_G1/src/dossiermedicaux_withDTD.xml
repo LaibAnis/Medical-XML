@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <!DOCTYPE dossiermidecaux SYSTEM "./dosiermedicaux.dtd"> 
+<dossiermidecaux >
+    <!-- dans cette balise <listemedecin> on definit tout les medecin qui ont traitee un dossier medical et ont leur attribue un ID pour on puisse les réferencier dans le documment -->
+    <listemedecin>
+
+        <medecin idm="m_1" sexe="homme">
+            <informationpersonnel>
+                <nom>Belkaid</nom>
+                <prenom>Sofiane</prenom>
+                <img src="src//doc1.jpg"/>
+
+                <datedenaissance>
+                    <jour>17</jour>
+                    <mois>01</mois>
+                    <annee>1990</annee>
+                </datedenaissance>
+
+                <email type="personel">belsofiane17@gmail.com</email>
+
+                <adresse type="privee">
+                    <pays>algerie</pays>
+                    <wilaya>oran</wilaya>
+                    <localitee>M9V5+VGC, Boulevard Doctor Benzerdjeb, Oran</localitee>
+                </adresse>
+
+            </informationpersonnel>
+
+            <informationprofesionnel>
+                <specialite>Cardiologie</specialite>
+                <numero categorie="mobile">0660917888</numero>
+                <lieuxdetravaille>
+                    <lieux type="cabinet">
+                        <nom>cabinet medicale de dr belkaid</nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>5 Place des Victoires, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                    <lieux type="etablissementdesante">
+                        <nom>clinique medicale de maternitee </nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>74 Boulevard centre ville, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                </lieuxdetravaille>
+            </informationprofesionnel>
+        </medecin>
+
+        <medecin idm="m_2" sexe="homme">
+            <informationpersonnel>
+                <nom>senhadji</nom>
+                <prenom>amine</prenom>
+                <img src="src//doc2.jpg"/>
+
+                <datedenaissance>
+                    <jour>25</jour>
+                    <mois>04</mois>
+                    <annee>1969</annee>
+                </datedenaissance>
+
+                <email type="personel">senham25@gmail.com</email>
+
+                <adresse type="privee">
+                    <pays>algerie</pays>
+                    <wilaya>oran</wilaya>
+                    <localitee>M9V5+VGC, Residence hasnaoui, Oran</localitee>
+                </adresse>
+
+            </informationpersonnel>
+
+            <informationprofesionnel>
+                <specialite>Ophtalmologie</specialite>
+                <numero categorie="mobile">0560917890</numero>
+                <lieuxdetravaille>
+                    <lieux type="cabinet">
+                        <nom>cabinet medicale de dr senhadji</nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>5 Place des Victoires, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                    <lieux type="etablissementdesante">
+                        <nom>clinique medicale </nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>74 Boulevard Doctor Benzerdjeb, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                </lieuxdetravaille>
+            </informationprofesionnel>
+        </medecin>
+
+        <medecin idm="m_3" sexe="homme">
+            <informationpersonnel>
+                <nom>hamedi</nom>
+                <prenom>ahmed</prenom>
+                <img src="src//doc3.jpg"/>
+
+                <datedenaissance>
+                    <jour>20</jour>
+                    <mois>08</mois>
+                    <annee>1970</annee>
+                </datedenaissance>
+
+                <email type="personel">hamediah17@gmail.com</email>
+
+                <adresse type="privee">
+                    <pays>algerie</pays>
+                    <wilaya>oran</wilaya>
+                    <localitee>M9V5+VGC, Boulevard Doctor Benzerdjeb, Oran</localitee>
+                </adresse>
+
+            </informationpersonnel>
+
+            <informationprofesionnel>
+                <specialite>Oncologie</specialite>
+                <numero categorie="mobile">0760917800</numero>
+                <lieuxdetravaille>
+                    <lieux type="cabinet">
+                        <nom>cabinet medicale de dr hamedi</nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>5 Place des Victoires, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                    <lieux type="etablissementdesante">
+                        <nom>clinique medicale</nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>74 Boulevard Doctor Benzerdjeb, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                </lieuxdetravaille>
+            </informationprofesionnel>
+        </medecin>
+        
+        <medecin idm="m_4" sexe="homme">
+            <informationpersonnel>
+                <nom>zemouri</nom>
+                <prenom>marwane</prenom>
+                <img src="src//doc4.jpg"/>
+
+                <datedenaissance>
+                    <jour>18</jour>
+                    <mois>07</mois>
+                    <annee>1980</annee>
+                </datedenaissance>
+
+                <email type="personel">zmmarwane18@gmail.com</email>
+
+                <adresse type="privee">
+                    <pays>algerie</pays>
+                    <wilaya>oran</wilaya>
+                    <localitee>M9V5+VGC, Senia, Oran</localitee>
+                </adresse>
+
+            </informationpersonnel>
+
+            <informationprofesionnel>
+                <specialite>Oncologie</specialite>
+                <numero categorie="mobile">0790817700</numero>
+                <lieuxdetravaille>
+                    <lieux type="cabinet">
+                        <nom>cabinet medicale de dr hamedi</nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>5 Place des Victoires, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                    <lieux type="etablissementdesante">
+                        <nom>clinique medicale</nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>74 Boulevard Doctor Benzerdjeb, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                </lieuxdetravaille>
+            </informationprofesionnel>
+        </medecin>
+        
+        <medecin idm="m_5" sexe="femme">
+            <informationpersonnel>
+                <nom>Melianni</nom>
+                <prenom>Oumayma</prenom>
+                <img src="src//doc5.jpg"/>
+
+                <datedenaissance>
+                    <jour>8</jour>
+                    <mois>10</mois>
+                    <annee>1985</annee>
+                </datedenaissance>
+
+                <email type="personel">meoumatma18@gmail.com</email>
+
+                <adresse type="privee">
+                    <pays>algerie</pays>
+                    <wilaya>oran</wilaya>
+                    <localitee>M9V5+VGC, Fernanville, Oran</localitee>
+                </adresse>
+
+            </informationpersonnel>
+
+            <informationprofesionnel>
+                <specialite>Oncologie</specialite>
+                <numero categorie="mobile">0678811800</numero>
+                <lieuxdetravaille>
+                    <lieux type="cabinet">
+                        <nom>cabinet medicale de Melianni</nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>Centre ville, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                    <lieux type="etablissementdesante">
+                        <nom>clinique medicale</nom>
+                        <adresse type="travaille">
+                            <pays>algerie</pays>
+                            <wilaya>oran</wilaya>
+                            <localitee>74 Boulevard Doctor Benzerdjeb, Oran 31000</localitee>
+                        </adresse>
+                    </lieux>
+                </lieuxdetravaille>
+            </informationprofesionnel>
+        </medecin>
+        
+
+    </listemedecin>
+
+     <!-- dans cette balise <listepatient> on definit tout les patient qui ont eté traitee avec un dossier medical et ont leur attribue un ID pour on puisse les réferencier dans le documment -->
+
+    <listepatient>
+
+        <patient idp="p_1" sexe="femme">
+            <nom>bellahcene</nom>
+            <prenom>zina</prenom>
+            <img src="src//p1.jpg"/>
+            <datedenaissance>
+                <jour>10</jour>
+                <mois>04</mois>
+                <annee>1959</annee>
+            </datedenaissance>
+            <age>65</age>
+            <email type="personel">bhhasnia10@gmail.com</email>
+            <adresse type="privee">
+                <pays>algerie</pays>
+                <wilaya>oran</wilaya>
+                <localitee>P939+X62, Rue Larbi Ben M'hidi, Oran</localitee>
+            </adresse>
+        </patient>
+           
+        <patient idp="p_2" sexe="femme">
+            <nom>oumara</nom>
+            <prenom>hasnia</prenom>
+            <img src="src//p2.jpg"/>
+            
+            <datedenaissance>
+                <jour>17</jour>
+                <mois>09</mois>
+                <annee>1960</annee>
+            </datedenaissance>
+            <age>64</age>
+            <email type="personel">oumarahasnia10@gmail.com</email>
+            <adresse type="privee">
+                <pays>algerie</pays>
+                <wilaya>oran</wilaya>
+                <localitee>P939+X62, centre ville les arcades, Oran</localitee>
+            </adresse>
+        </patient>
+        
+        <patient idp="p_3" sexe="femme">
+            <nom>zhor</nom>
+            <prenom>marwa</prenom>
+            <img src="src//p3.jpg"/>
+            
+            <datedenaissance>
+                <jour>20</jour>
+                <mois>07</mois>
+                <annee>1959</annee>
+            </datedenaissance>
+            <age>65</age>
+            <email type="personel">zhormr20@gmail.com</email>
+            <adresse type="privee">
+                <pays>algerie</pays>
+                <wilaya>oran</wilaya>
+                <localitee>P939+X62, Fernanville, Oran</localitee>
+            </adresse>
+        </patient>
+         <patient idp="p_4" sexe="femme">
+            <nom>zegaydi</nom>
+            <prenom>fatima</prenom>
+            <img src="src//p6.jpg"/>
+            
+            <datedenaissance>
+                <jour>12</jour>
+                <mois>04</mois>
+                <annee>1971</annee>
+            </datedenaissance>
+            <age>52</age>
+            <email type="personel">zegaydi10@gmail.com</email>
+            <adresse type="privee">
+                <pays>algerie</pays>
+                <wilaya>oran</wilaya>
+                <localitee>P939+X62, Resisdence hasnaoui, Oran</localitee>
+            </adresse>
+        </patient>
+        <patient idp="p_5" sexe="homme">
+            <nom>hasnaoui</nom>
+            <prenom>amine</prenom>
+            <img src="src//p4.jpg"/>
+            <datedenaissance>
+                <jour>27</jour>
+                <mois>04</mois>
+                <annee>1989</annee>
+            </datedenaissance>
+            <age>34</age>
+            <email type="personel">hasnaouiam27@gmail.com</email>
+            <adresse type="privee">
+                <pays>algerie</pays>
+                <wilaya>oran</wilaya>
+                <localitee>P939+X62, Bir el djir, Oran</localitee>
+            </adresse>
+        </patient>
+        <patient idp="p_6" sexe="homme">
+            <nom>zidani</nom>
+            <prenom>mohamed</prenom>
+            <img src="src//p5.jpg"/>
+            
+            <datedenaissance>
+                <jour>17</jour>
+                <mois>01</mois>
+                <annee>1980</annee>
+            </datedenaissance>
+            <age>43</age>
+            <email type="personel">zidanimh17@gmail.com</email>
+            <adresse type="privee">
+                <pays>algerie</pays>
+                <wilaya>oran</wilaya>
+                <localitee>P939+X62, Senia, Oran</localitee>
+            </adresse>
+        </patient>
+
+    </listepatient>
+
+
+    <listdossier>
+        <dossier idd="d_1">
+            <!-- la balise <medecintraitant> fait referance grace aux ID , a de tout les medecins qui ont traitee ce dossier et qui se trouve dans la balise <listemedecin> -->
+            <medecintraitant ref="m_1 m_2 m_3"/>
+    
+            <informationadministrative>
+                <!-- la balise <patientconcernee> fait referance grace a l'attribut ref , aux ID du patient a qui ce dossier appartient et qui se trouve dans la balise <patientconcernee> -->
+                <patientconcernee ref="p_1"/>
+                <datedecreation>
+                    <jour>10</jour>
+                    <mois>01</mois>
+                    <annee>2022</annee>
+                </datedecreation>
+            </informationadministrative>
+
+            <listeconsultation>
+                <consultation id="c_1">
+                    <mantant>2000</mantant>
+                </consultation>
+                <consultation id="c_2">
+                    <mantant>6000</mantant>
+                </consultation>
+                <consultation id="c_3">
+                    <mantant>2000</mantant>
+                </consultation>
+            </listeconsultation>
+    
+            <listantecedant>
+                <antecedantmedicaux>
+                    <antecedant>
+                        <nom>Accident vasculaire cérébral.</nom>
+                        <commentaire>controlee</commentaire>
+                        <annee>2000</annee>
+                    </antecedant>
+                </antecedantmedicaux>
+        
+                <antecedantchurigicaux>
+                    <pasdantecedant/>
+                </antecedantchurigicaux>
+        
+                <antecedantfamiliaux>
+                    <pasdantecedant/>
+                </antecedantfamiliaux>
+            </listantecedant>
+            <listeallergie>
+                <pasdallergie/>
+            </listeallergie>
+            <modedevie>
+                <tabac consomation="sevree"/>
+                <alcool consomation="non"/>
+                <profession>Professeur</profession>
+                <autreinformation>Actrice</autreinformation>
+            </modedevie>
+
+            <donneedesuivie>
+                <taille>178 <![CDATA[ < CM >]]></taille>
+                <poids>80 <![CDATA[ < KG >]]></poids>
+                <imc>21 <![CDATA[ < KG / M^2 >]]></imc>
+                <!-- pression arterielle systique PAS-->
+                <pressionAS>20 <![CDATA[ < mm Hg >]]></pressionAS>
+                 <!-- pression arterielle diastolique PAD-->
+                 <pressionAD>16 <![CDATA[ < mm Hg >]]></pressionAD>
+                 <frequencecardiaque>70 <![CDATA[ < BPM >]]></frequencecardiaque>
+            </donneedesuivie>
+            <carnetvaccination>
+                <vaccin>
+                    <nom>AC VAX</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACAM 2000</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACTACEL</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADDIGRIP</nom>
+                    <annee>2010</annee>
+                    <age>41</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADIUGRIP</nom>
+                    <annee>2023</annee>
+                    <age>54</age>
+                </vaccin>
+            </carnetvaccination>
+
+            <listetraitementdefond>
+                <traitement>
+                    <nom>ABILIFY 10 mg</nom>
+                    <commentaire>regulierement</commentaire>
+                </traitement>
+            </listetraitementdefond>
+
+            <listetraitementponctuel>
+                <traitement idconsultation="c_1" refordonnance="e_4">
+                    <nom>doliprane 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 comprimee par jour</commentaire>
+                </traitement>
+                <traitement idconsultation="c_2" refordonnance="e_11">
+                    <nom>doliprane 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 comprimee par jour</commentaire>
+                </traitement>
+                <traitement idconsultation="c_3" refordonnance="e_12">
+                    <nom>ibuprofen 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 cuillere a cafe par jour</commentaire>
+                </traitement>
+            </listetraitementponctuel>
+
+            <listedocument>
+                <document ide="e_1" src="./document/irm.jpg" type="imagerie_médicale">
+                    <nom>resultat irm</nom>
+                    <emeteur ref="m_3"/>
+                </document>
+                <document ide="e_2" src="./document/scanner.jpg" type="imagerie_médicale">
+                    <nom>resultat scanner</nom>
+                    <emeteur ref="m_3"/>
+                </document>
+                <document ide="e_3" src="./document/bilan.pdf" type="résultats_d_analyses">
+                    <nom>bilan complet</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+                <document ide="e_4" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_1">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+                <document ide="e_5" src="./document/ordonnance.pdf" type="certificat" >
+                    <nom>certification pour pratiquee une activitee physique</nom>
+                    <emeteur ref="m_1"/>
+                </document>
+                <document ide="e_11" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_2">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+                <document ide="e_12" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_3">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+            </listedocument>
+
+            <listobservationmedicale>
+                <observationmedical ido="o_1" idconsultation="c_1">
+                    <motif>consultation cardiologie</motif>
+                    <interogatoire>quelle sont vos symptomes?</interogatoire>
+                    <examen>cassete </examen>
+                </observationmedical>
+            </listobservationmedicale>
+
+            
+        </dossier>
+
+         <dossier idd="d_2">
+            <!-- la balise <medecintraitant> fait referance grace aux ID , a de tout les medecins qui ont traitee ce dossier et qui se trouve dans la balise <listemedecin> -->
+            <medecintraitant ref="m_1 m_2 m_3"/>
+    
+            <informationadministrative>
+                <!-- la balise <patientconcernee> fait referance grace a l'attribut ref , aux ID du patient a qui ce dossier appartient et qui se trouve dans la balise <patientconcernee> -->
+                <patientconcernee ref="p_2"/>
+                <datedecreation>
+                    <jour>20</jour>
+                    <mois>01</mois>
+                    <annee>2022</annee>
+                </datedecreation>
+            </informationadministrative>
+
+            <listeconsultation>
+                <consultation id="c_4">
+                    <mantant>2000</mantant>
+                </consultation>
+            </listeconsultation>
+    
+            <listantecedant>
+                <antecedantmedicaux>
+                    <antecedant>
+                        <nom>cancer du fois</nom>
+                        <commentaire>controlee</commentaire>
+                        <annee>1998</annee>
+                    </antecedant>
+                     <antecedant>
+                        <nom>Diabete type 2</nom>
+                        <annee>1999</annee>
+                    </antecedant>
+                    <antecedant>
+                        <nom>Ashmatique</nom>
+                        <annee>1970</annee>
+                    </antecedant>
+                </antecedantmedicaux>
+        
+                <antecedantchurigicaux>
+                    <antecedant>
+                        <nom>Chiriguie de cataract</nom>
+                        <commentaire>passee avec succee</commentaire>
+                        <annee>1998</annee>
+                    </antecedant>
+                     <antecedant>
+                        <nom>Chiriguie du fois</nom>
+                        <annee>1998</annee>
+                    </antecedant>
+                </antecedantchurigicaux>
+        
+                <antecedantfamiliaux>
+                    <antecedant>
+                        <nom>cancer du sein</nom>
+                        <parent>mere</parent>
+                        <annee>1980</annee>
+                    </antecedant>
+                </antecedantfamiliaux>
+            </listantecedant>
+            <listeallergie>
+                <pasdallergie/>
+            </listeallergie>
+            <modedevie>
+                <tabac consomation="oui"/>
+                <alcool consomation="non"/>
+                <profession>educatrice</profession>
+                <autreinformation>sportive et motivee</autreinformation>
+            </modedevie>
+
+            <donneedesuivie>
+                <taille>188 <![CDATA[ < CM >]]></taille>
+                <poids>78 <![CDATA[ < KG >]]></poids>
+                <imc>19 <![CDATA[ < KG / M^2 >]]></imc>
+                <!-- pression arterielle systique PAS-->
+                <pressionAS>17 <![CDATA[ < mm Hg >]]></pressionAS>
+                 <!-- pression arterielle diastolique PAD-->
+                 <pressionAD>17 <![CDATA[ < mm Hg >]]></pressionAD>
+                 <frequencecardiaque>70 <![CDATA[ < BPM >]]></frequencecardiaque>
+            </donneedesuivie>
+            <carnetvaccination>
+                <vaccin>
+                    <nom>AC VAX</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACAM 2000</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACTACEL</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADDIGRIP</nom>
+                    <annee>2010</annee>
+                    <age>41</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADIUGRIP</nom>
+                    <annee>2023</annee>
+                    <age>54</age>
+                </vaccin>
+            </carnetvaccination>
+
+            <listetraitementdefond>
+                <traitement>
+                    <nom>ventoline</nom>
+                    <commentaire>regulierement</commentaire>
+                </traitement>
+                <traitement>
+                    <nom>Insuline</nom>
+                    <commentaire>regulierement</commentaire>
+                </traitement>
+            </listetraitementdefond>
+
+            <listetraitementponctuel>
+                <traitement idconsultation="c_4" refordonnance="e_4">
+                    <nom>doliprane 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 comprimee par jour</commentaire>
+                </traitement>
+            </listetraitementponctuel>
+
+            <listedocument>
+                <document ide="e_6" src="./document/irm.jpg" type="imagerie_médicale">
+                    <nom>resultat irm</nom>
+                    <emeteur ref="m_3"/>
+                </document>
+                <document ide="e_7" src="./document/scanner.jpg" type="imagerie_médicale">
+                    <nom>resultat scanner</nom>
+                    <emeteur ref="m_3"/>
+                </document>
+                <document ide="e_8" src="./document/bilan.pdf" type="résultats_d_analyses">
+                    <nom>bilan complet</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+                <document ide="e_9" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_4">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+                <document ide="e_10" src="./document/ordonnance.pdf" type="certificat" >
+                    <nom>certification pour pratiquee une activitee physique</nom>
+                    <emeteur ref="m_1"/>
+                </document>
+            </listedocument>
+
+            <listobservationmedicale>
+                <observationmedical ido="o_2" idconsultation="c_4">
+                    <motif>consultation cardiologie</motif>
+                    <interogatoire>quelle sont vos symptomes?</interogatoire>
+                    <examen>cassete </examen>
+                </observationmedical>
+            </listobservationmedicale>
+
+            
+        </dossier>
+        <dossier idd="d_3">
+            <!-- la balise <medecintraitant> fait referance grace aux ID , a de tout les medecins qui ont traitee ce dossier et qui se trouve dans la balise <listemedecin> -->
+            <medecintraitant ref="m_1 m_2 m_4"/>
+    
+            <informationadministrative>
+                <!-- la balise <patientconcernee> fait referance grace a l'attribut ref , aux ID du patient a qui ce dossier appartient et qui se trouve dans la balise <patientconcernee> -->
+                <patientconcernee ref="p_3"/>
+                <datedecreation>
+                    <jour>18</jour>
+                    <mois>07</mois>
+                    <annee>2022</annee>
+                </datedecreation>
+            </informationadministrative>
+
+            <listeconsultation>
+                <consultation id="c_5">
+                    <mantant>2000</mantant>
+                </consultation>
+                <consultation id="c_6">
+                    <mantant>6000</mantant>
+                </consultation>
+                <consultation id="c_7">
+                    <mantant>2000</mantant>
+                </consultation>
+            </listeconsultation>
+    
+            <listantecedant>
+                <antecedantmedicaux>
+                    <antecedant>
+                        <nom>Acromégalie</nom>
+                        <commentaire>controlee</commentaire>
+                        <annee>2010</annee>
+                    </antecedant>
+                </antecedantmedicaux>
+        
+                <antecedantchurigicaux>
+                    <pasdantecedant/>
+                </antecedantchurigicaux>
+        
+                <antecedantfamiliaux>
+                    <pasdantecedant/>
+                </antecedantfamiliaux>
+            </listantecedant>
+            <listeallergie>
+                <pasdallergie/>
+            </listeallergie>
+            <modedevie>
+                <tabac consomation="sevree"/>
+                <alcool consomation="non"/>
+                <profession>Photographe</profession>
+                <autreinformation>Pratique du yoga</autreinformation>
+            </modedevie>
+
+            <donneedesuivie>
+                <taille>170 <![CDATA[ < CM >]]></taille>
+                <poids>60 <![CDATA[ < KG >]]></poids>
+                <imc>18 <![CDATA[ < KG / M^2 >]]></imc>
+                <!-- pression arterielle systique PAS-->
+                <pressionAS>19 <![CDATA[ < mm Hg >]]></pressionAS>
+                 <!-- pression arterielle diastolique PAD-->
+                 <pressionAD>16 <![CDATA[ < mm Hg >]]></pressionAD>
+                 <frequencecardiaque>70 <![CDATA[ < BPM >]]></frequencecardiaque>
+            </donneedesuivie>
+            <carnetvaccination>
+                <vaccin>
+                    <nom>AC VAX</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACAM 2000</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACTACEL</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADDIGRIP</nom>
+                    <annee>2010</annee>
+                    <age>41</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADIUGRIP</nom>
+                    <annee>2023</annee>
+                    <age>54</age>
+                </vaccin>
+            </carnetvaccination>
+
+            <listetraitementdefond>
+                <traitement>
+                    <nom>ACEBUTOLOL TEVA 200 mg</nom>
+                    <commentaire>regulierement</commentaire>
+                </traitement>
+            </listetraitementdefond>
+
+            <listetraitementponctuel>
+                <traitement idconsultation="c_5" refordonnance="e_15">
+                    <nom>doliprane 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 comprimee par jour</commentaire>
+                </traitement>
+                <traitement idconsultation="c_6" refordonnance="e_15">
+                    <nom>doliprane 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 comprimee par jour</commentaire>
+                </traitement>
+                <traitement idconsultation="c_7" refordonnance="e_16">
+                    <nom>ibuprofen 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 cuillere a cafe par jour</commentaire>
+                </traitement>
+            </listetraitementponctuel>
+
+            <listedocument>
+                <document ide="e_13" src="./document/irm.jpg" type="imagerie_médicale">
+                    <nom>resultat irm</nom>
+                    <emeteur ref="m_4"/>
+                </document>
+                <document ide="e_14" src="./document/scanner.jpg" type="imagerie_médicale">
+                    <nom>resultat scanner</nom>
+                    <emeteur ref="m_4"/>
+                </document>
+                <document ide="e_15" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_5">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+                <document ide="e_16" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_6">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+            </listedocument>
+
+            <listobservationmedicale>
+                <observationmedical ido="o_3" idconsultation="c_5">
+                    <motif>consultation cardiologie</motif>
+                    <interogatoire>quelle sont vos symptomes?</interogatoire>
+                    <examen>cassete </examen>
+                </observationmedical>
+            </listobservationmedicale>
+
+            
+        </dossier>
+        <dossier idd="d_4">
+            <!-- la balise <medecintraitant> fait referance grace aux ID , a de tout les medecins qui ont traitee ce dossier et qui se trouve dans la balise <listemedecin> -->
+            <medecintraitant ref="m_1 m_2 m_5"/>
+    
+            <informationadministrative>
+                <!-- la balise <patientconcernee> fait referance grace a l'attribut ref , aux ID du patient a qui ce dossier appartient et qui se trouve dans la balise <patientconcernee> -->
+                <patientconcernee ref="p_4"/>
+                <datedecreation>
+                    <jour>17</jour>
+                    <mois>01</mois>
+                    <annee>2022</annee>
+                </datedecreation>
+            </informationadministrative>
+
+            <listeconsultation>
+                <consultation id="c_8">
+                    <mantant>2000</mantant>
+                </consultation>
+                <consultation id="c_9">
+                    <mantant>6000</mantant>
+                </consultation>
+                <consultation id="c_10">
+                    <mantant>2000</mantant>
+                </consultation>
+            </listeconsultation>
+    
+            <listantecedant>
+                <antecedantmedicaux>
+                    <antecedant>
+                        <nom>Polykystose rénale autosomique</nom>
+                        <commentaire>controlee</commentaire>
+                        <annee>1990</annee>
+                    </antecedant>
+                </antecedantmedicaux>
+        
+                <antecedantchurigicaux>
+                    <pasdantecedant/>
+                </antecedantchurigicaux>
+        
+                <antecedantfamiliaux>
+                    <pasdantecedant/>
+                </antecedantfamiliaux>
+            </listantecedant>
+            <listeallergie>
+                <pasdallergie/>
+            </listeallergie>
+            <modedevie>
+                <tabac consomation="non"/>
+                <alcool consomation="non"/>
+                <profession>Profe de science</profession>
+            </modedevie>
+
+            <donneedesuivie>
+                <taille>172 <![CDATA[ < CM >]]></taille>
+                <poids>60 <![CDATA[ < KG >]]></poids>
+                <imc>17 <![CDATA[ < KG / M^2 >]]></imc>
+                <!-- pression arterielle systique PAS-->
+                <pressionAS>17 <![CDATA[ < mm Hg >]]></pressionAS>
+                 <!-- pression arterielle diastolique PAD-->
+                 <pressionAD>16 <![CDATA[ < mm Hg >]]></pressionAD>
+                 <frequencecardiaque>70 <![CDATA[ < BPM >]]></frequencecardiaque>
+            </donneedesuivie>
+            <carnetvaccination>
+                <vaccin>
+                    <nom>AC VAX</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACAM 2000</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACTACEL</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADDIGRIP</nom>
+                    <annee>2010</annee>
+                    <age>41</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADIUGRIP</nom>
+                    <annee>2023</annee>
+                    <age>54</age>
+                </vaccin>
+            </carnetvaccination>
+
+            <listetraitementdefond>
+                <traitement>
+                    <nom>CORTIMENT 9 mg</nom>
+                    <commentaire>regulierement</commentaire>
+                </traitement>
+            </listetraitementdefond>
+
+            <listetraitementponctuel>
+                <traitement idconsultation="c_8" refordonnance="e_20">
+                    <nom>doliprane 100 <![CDATA[ <100 mG>]]></nom>
+                    <commentaire>2 comprimee par jour</commentaire>
+                </traitement>
+                <traitement idconsultation="c_9" refordonnance="e_20">
+                    <nom>COVERAM  <![CDATA[ <10/10 mG>]]></nom>
+                    <commentaire>2 comprimee par jour</commentaire>
+                </traitement>
+                <traitement idconsultation="c_10" refordonnance="e_21">
+                    <nom>ibuprofen 100 <![CDATA[ <100 mG>]]></nom>
+                    <commentaire>2 cuillere a cafe par jour</commentaire>
+                </traitement>
+            </listetraitementponctuel>
+
+            <listedocument>
+                <document ide="e_17" src="./document/irm.jpg" type="imagerie_médicale">
+                    <nom>resultat irm</nom>
+                    <emeteur ref="m_3"/>
+                </document>
+                <document ide="e_18" src="./document/scanner.jpg" type="imagerie_médicale">
+                    <nom>resultat scanner</nom>
+                    <emeteur ref="m_3"/>
+                </document>
+                <document ide="e_19" src="./document/bilan.pdf" type="résultats_d_analyses">
+                    <nom>bilan complet</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+                <document ide="e_20" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_1">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+ 
+                <document ide="e_21" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_2">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_5"/>
+                </document>
+            </listedocument>
+
+            <listobservationmedicale>
+                <observationmedical ido="o_4" idconsultation="c_10">
+                    <motif>consultation cardiologie</motif>
+                    <interogatoire>quelle sont vos symptomes?</interogatoire>
+                    <examen>cassete </examen>
+                </observationmedical>
+            </listobservationmedicale>
+
+            
+        </dossier>
+        <dossier idd="d_5">
+            <!-- la balise <medecintraitant> fait referance grace aux ID , a de tout les medecins qui ont traitee ce dossier et qui se trouve dans la balise <listemedecin> -->
+            <medecintraitant ref="m_3 m_1 m_5"/>
+    
+            <informationadministrative>
+                <!-- la balise <patientconcernee> fait referance grace a l'attribut ref , aux ID du patient a qui ce dossier appartient et qui se trouve dans la balise <patientconcernee> -->
+                <patientconcernee ref="p_5"/>
+                <datedecreation>
+                    <jour>09</jour>
+                    <mois>01</mois>
+                    <annee>2021</annee>
+                </datedecreation>
+            </informationadministrative>
+
+            <listeconsultation>
+                <consultation id="c_11">
+                    <mantant>2000</mantant>
+                </consultation>
+                <consultation id="c_12">
+                    <mantant>8000</mantant>
+                </consultation>
+            </listeconsultation>
+    
+            <listantecedant>
+                <antecedantmedicaux>
+                    <antecedant>
+                        <nom>Cypho-scoliose juvénile</nom>
+                        <commentaire>controlee</commentaire>
+                        <annee>2008</annee>
+                    </antecedant>
+                </antecedantmedicaux>
+        
+                <antecedantchurigicaux>
+                    <pasdantecedant/>
+                </antecedantchurigicaux>
+        
+                <antecedantfamiliaux>
+                    <pasdantecedant/>
+                </antecedantfamiliaux>
+            </listantecedant>
+            <listeallergie>
+                <pasdallergie/>
+            </listeallergie>
+            <modedevie>
+                <tabac consomation="non"/>
+                <alcool consomation="non"/>
+                <profession>Ingenieur</profession>
+            </modedevie>
+
+            <donneedesuivie>
+                <taille>187 <![CDATA[ < CM >]]></taille>
+                <poids>88 <![CDATA[ < KG >]]></poids>
+                <imc>28 <![CDATA[ < KG / M^2 >]]></imc>
+                <!-- pression arterielle systique PAS-->
+                <pressionAS>17 <![CDATA[ < mm Hg >]]></pressionAS>
+                 <!-- pression arterielle diastolique PAD-->
+                 <pressionAD>12 <![CDATA[ < mm Hg >]]></pressionAD>
+                 <frequencecardiaque>70 <![CDATA[ < BPM >]]></frequencecardiaque>
+            </donneedesuivie>
+            <carnetvaccination>
+                <vaccin>
+                    <nom>AC VAX</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACAM 2000</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ACTACEL</nom>
+                    <annee>2000</annee>
+                    <age>31</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADDIGRIP</nom>
+                    <annee>2010</annee>
+                    <age>41</age>
+                </vaccin>
+                <vaccin>
+                    <nom>ADIUGRIP</nom>
+                    <annee>2023</annee>
+                    <age>54</age>
+                </vaccin>
+            </carnetvaccination>
+
+            <listetraitementdefond>
+                <traitement>
+                    <nom>CUFENCE 200 mg</nom>
+                    <commentaire>regulierement</commentaire>
+                </traitement>
+            </listetraitementdefond>
+
+            <listetraitementponctuel>
+                <traitement idconsultation="c_11" refordonnance="e_21">
+                    <nom>Supiride <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 Cuillere a cafee par jour</commentaire>
+                </traitement>
+                <traitement idconsultation="c_12" refordonnance="e_21">
+                    <nom>doliprane 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 comprimee par jour</commentaire>
+                </traitement>
+                <traitement idconsultation="c_11" refordonnance="e_22">
+                    <nom>ibuprofen 100 <![CDATA[ <100 G>]]></nom>
+                    <commentaire>2 cuillere a cafe par jour</commentaire>
+                </traitement>
+            </listetraitementponctuel>
+
+            <listedocument>
+                <document ide="e_22" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_2">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+                <document ide="e_23" src="./document/ordonnance.pdf" type="ordonnance_de_pharmacie" idconsultation="c_3">
+                    <nom>ordonnance de la consultation</nom>
+                    <emeteur ref="m_2"/>
+                </document>
+            </listedocument>
+
+            <listobservationmedicale>
+                <observationmedical ido="o_5" idconsultation="c_11">
+                    <motif>consultation cardiologie</motif>
+                    <interogatoire>quelle sont vos symptomes?</interogatoire>
+                    <examen>cassete </examen>
+                </observationmedical>
+            </listobservationmedicale>
+
+            
+        </dossier>
+    </listdossier>
+</dossiermidecaux>

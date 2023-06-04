@@ -1,0 +1,141 @@
+<!ENTITY % sexetype "(homme|femme)">
+<!ENTITY % numerotype "(personel|profesionnel)">
+<!ENTITY % numerocategorie "(mobile|fix)">
+<!ENTITY % emailtype "(personel|profesionnel)">
+<!ENTITY % adressetype "(privee|travaille)">
+<!ENTITY % lieuxtype "(cabinet|etablissementdesante)">
+<!ENTITY % consom "(non|oui|sevree)">
+<!ENTITY % documenttype "(imagerie_médicale|résultats_d_analyses|ordonnance_de_pharmacie|certificat)">
+<!ENTITY dinar "DA">
+
+<!ELEMENT dossiermidecaux (listemedecin,listepatient,listdossier)>
+<!-- Description des medecin-->
+<!ELEMENT listemedecin (medecin+)>
+<!ELEMENT medecin (informationpersonnel,informationprofesionnel)>
+<!ATTLIST medecin idm ID #REQUIRED
+sexe %sexetype; #REQUIRED>
+
+<!ELEMENT informationpersonnel (nom,prenom,img,datedenaissance,numero?,email,adresse?)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT img EMPTY>
+<!ELEMENT datedenaissance (jour,mois,annee)>
+<!ELEMENT jour (#PCDATA)>
+<!ELEMENT mois (#PCDATA)>
+<!ELEMENT annee (#PCDATA)>
+<!ATTLIST img src CDATA #REQUIRED> 
+<!ELEMENT numero (#PCDATA)>
+<!ATTLIST numero type %numerotype; "profesionnel"
+categorie %numerocategorie; #IMPLIED>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email type %emailtype; #REQUIRED>
+<!ELEMENT adresse (pays?,wilaya,localitee)>
+<!ATTLIST adresse type %adressetype; #REQUIRED>
+<!ELEMENT pays (#PCDATA)>
+<!ELEMENT wilaya (#PCDATA)>
+<!ELEMENT localitee (#PCDATA)>
+
+<!ELEMENT informationprofesionnel (specialite,numero,lieuxdetravaille,listediplomme?,listeexperience?)>
+<!ELEMENT specialite (#PCDATA)>
+<!ELEMENT lieuxdetravaille (lieux+)>
+<!ELEMENT lieux (nom,adresse)>
+<!ATTLIST lieux type %lieuxtype; #REQUIRED>
+<!ELEMENT listediplomme (diplome)>
+<!ELEMENT diplome (#PCDATA)>
+<!ELEMENT listeexperience (experience)>
+<!ELEMENT experience (#PCDATA)>
+
+
+<!-- Description des patient-->
+<!ELEMENT listepatient (patient+)>
+<!ELEMENT patient (nom,prenom,img,datedenaissance,age,email?,numero?,adresse)>
+<!ATTLIST patient idp ID #REQUIRED
+sexe %sexetype; #REQUIRED>
+<!ELEMENT age (#PCDATA)>
+
+<!-- Description des dossier-->
+<!ELEMENT listdossier (dossier*)>
+<!ELEMENT dossier (medecintraitant,informationadministrative,listeconsultation,listantecedant,listeallergie,modedevie,donneedesuivie,carnetvaccination,listetraitementdefond,listetraitementponctuel,listedocument,listobservationmedicale)>
+<!ATTLIST dossier idd ID #REQUIRED>
+
+ <!-- la balise <medecintraitant> fait referance grace aux ID , a de tout les medecins qui ont traitee ce dossier et qui se trouve dans la balise <listemedecin> -->
+<!ELEMENT medecintraitant EMPTY>
+<!ATTLIST medecintraitant ref IDREFS #REQUIRED>
+
+<!ELEMENT informationadministrative (patientconcernee,datedecreation)>
+<!-- la balise <patientconcernee> fait referance grace a l'attribut ref , aux ID du patient a qui ce dossier appartient et qui se trouve dans la balise <patientconcernee> -->
+<!ELEMENT patientconcernee EMPTY>
+<!ATTLIST patientconcernee ref IDREF #REQUIRED>
+<!ELEMENT datedecreation (jour,mois,annee)>
+
+<!ELEMENT listeconsultation (consultation+)>
+<!ELEMENT consultation (mantant)>
+<!ATTLIST consultation id ID #REQUIRED>
+<!ELEMENT mantant (#PCDATA)>
+
+<!ELEMENT listantecedant (antecedantmedicaux,antecedantchurigicaux,antecedantfamiliaux)>
+<!ELEMENT antecedantmedicaux (pasdantecedant|antecedant+)>
+
+<!ELEMENT pasdantecedant EMPTY>
+<!ELEMENT antecedant (nom,parent?,commentaire?,annee)>
+<!ELEMENT parent (#PCDATA)>
+<!ELEMENT commentaire (#PCDATA)>
+
+<!ELEMENT antecedantchurigicaux (pasdantecedant|antecedant+)>
+
+<!ELEMENT antecedantfamiliaux (pasdantecedant|antecedant+)>
+
+<!ELEMENT listeallergie (pasdallergie|allergie+)>
+
+<!ELEMENT pasdallergie EMPTY>
+<!ELEMENT allergie (nom,commentaire?,annee)>
+
+<!ELEMENT modedevie (tabac,alcool,profession,autreinformation?)>
+<!ELEMENT tabac EMPTY>
+<!ATTLIST tabac consomation %consom; #REQUIRED>
+<!ELEMENT alcool EMPTY>
+<!ATTLIST alcool consomation %consom; #REQUIRED>
+<!ELEMENT profession (#PCDATA)>
+<!ELEMENT autreinformation (#PCDATA)>
+
+
+<!ELEMENT donneedesuivie (taille,poids,imc,pressionAS,pressionAD,frequencecardiaque,autredonnee?)>
+<!ELEMENT taille (#PCDATA)>
+<!ELEMENT poids (#PCDATA)>
+<!ELEMENT imc (#PCDATA)>
+<!ELEMENT  pressionAS (#PCDATA)>
+<!ELEMENT pressionAD (#PCDATA)>
+<!ELEMENT frequencecardiaque (#PCDATA)>
+<!ELEMENT autredonnee ANY>
+
+<!ELEMENT carnetvaccination (vaccin+)>
+<!ELEMENT vaccin (nom,annee,age)>
+
+
+<!ELEMENT listetraitementdefond (traitement*)>
+<!ELEMENT traitement (nom,commentaire?)>
+<!ATTLIST traitement idconsultation IDREF #IMPLIED
+refordonnance IDREF #IMPLIED
+>
+
+<!ELEMENT listetraitementponctuel (traitement+)>
+
+
+<!ELEMENT listedocument (document+)>
+<!ELEMENT document (nom,emeteur)>
+<!ATTLIST document ide ID #REQUIRED
+src CDATA #REQUIRED
+type %documenttype; #REQUIRED
+idconsultation IDREF #IMPLIED
+>
+<!ELEMENT emeteur (#PCDATA)>
+<!ATTLIST emeteur ref IDREF #REQUIRED>
+
+
+<!ELEMENT listobservationmedicale (observationmedical+)>
+<!ELEMENT observationmedical (motif,interogatoire,examen)>
+<!ATTLIST observationmedical ido ID #REQUIRED
+idconsultation IDREF #REQUIRED>
+<!ELEMENT motif (#PCDATA)>
+<!ELEMENT interogatoire (#PCDATA)>
+<!ELEMENT examen (#PCDATA)>
